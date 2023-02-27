@@ -1,0 +1,247 @@
+
+<!-- 
+generally the css classes used here was imported from the website w3schools.com and I learned how and when to use them by youtube
+videos as well as templates from the website. I also used the font awesome website to get the icons for the website. 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness awareness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type = "text/css" href="w3.css" media="screen"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="script.js"></script>
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top"> 
+  <!-- /* w3-top is a class that makes the navbar stay at the top of the page */ -->
+  <div class="w3-bar" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROGRESS PICTURES</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <!-- /* w3-display-container is a class that makes the image visiable and opacity-min is to give it that look that you can see basically decrease the opacity of it */ -->
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">Fitness</span> </span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<!-- /* w3-content is a class that that sets the width to 980 px.. while being in the center with that specific padding */ -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT GYM</h3>
+  <p class="w3-center"><em>Why do I love gym?</em></p>
+  <p>There are many reasons why someone should love going to the gym. Regular exercise is essential for maintaining good physical health, as it can help reduce the risk of chronic diseases, improve cardiovascular health,
+     increase muscle strength and flexibility, and improve overall fitness. Additionally, working out at the gym can boost your mental health and reduce stress levels. Exercise has been shown to boost mood, increase self-confidence,
+      and improve sleep quality. The gym is also a great place to socialize and meet new people who share similar interests, as well as a supportive and encouraging community. Whether you're trying to lose weight, gain muscle, 
+      or simply stay active, the gym provides the equipment, resources, and atmosphere to help you achieve your goals and lead a healthier, happier life..</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <!-- /* w3-col is a class that makes the image stay at the center of the page */ -->
+      <img src="w3images/avatar_hat.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333" style="margin-top: 20px;
+      ">
+      <!-- /* w3-round is a class that makes the image round */ -->
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <!-- /* w3-hide-small makes the div or the container invinisable */ -->
+      <p>As a college student at NYUAD from Egypt, I never thought I would become a gym enthusiast. I used to be skinny and lacked confidence in my physical appearance. But that all changed when I discovered the power of the gym.
+
+        Going to the gym was a game-changer for me. I was able to sculpt my body, build muscle, and increase my overall strength and fitness. The transformation I experienced was not just physical, but also mental. 
+        The gym gave me a sense of empowerment and self-esteem that I never knew I was capable of having. I felt proud of what I was able to accomplish and it motivated me to work even harder.
+        
+        The gym is not just a place to work out, it's a community. I met amazing people, including trainers and fellow gym-goers who were always there to support and encourage me. They helped me push through tough workouts and reach my goals.
+        
+        In conclusion, the gym has been a life-changing experience for me. I'm grateful for the transformation it has brought about in my life and I would highly recommend it to anyone looking to improve their physical and mental well-being.
+         Whether you're a seasoned fitness enthusiast or a beginner, the gym has something to offer for everyone..</p>
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">What does it take to build muscles?</p>
+  <!-- /* w3-large is a class that makes the text bigger */ -->
+  <p class="w3-wide"><i class="fa fa-camera"></i>Workout(weight lifting)</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    <!-- /* w3-container is a class that makes that starts a container or a box with small padding and dark grey color while centering */ -->
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Calories</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Protein</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+
+  <div style="margin-top: 60px;"></div>
+
+  <!-- we are gonna try here -->
+  <div class="w3-container form-container">
+    <!-- /* w3-container is a class that makes the text stay at the center of the page */ -->
+    <h2>Muscle Building Calculator</h2>
+    <p>Enter your weight (in kg) and height (in cm):</p>
+    <p><input id="weight" type="number" placeholder="Weight (kg)"></p>
+    <p><input id="height" type="number" placeholder="Height (cm)"></p>
+    <p><button type="button" onclick="calculate()">Calculate</button></p>
+    <!-- /* w3-button is a class that makes the button stay at the center of the page */ -->
+    <p id="result"></p>
+  </div>
+
+
+
+
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+
+
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">3,800+</span><br>
+    calories to bulk
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">2000-</span><br>
+    calories to cut
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">2500</span><br>
+    to maintain
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">100</span><br>
+    grams of protein daily
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <!-- /* w3-display-container is a class that makes the text stay at the center of the page */ -->
+  <div class="w3-display-middle">
+    <!-- /* w3-display-middle is a class that makes the text stay at the center of the page */ -->
+    <span class="w3-xxlarge w3-text-white w3-wide">PROGRESS PICTURES</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <!-- /* w3-content is a class that makes the text stay at the center of the page */ -->
+  <h3 class="w3-center">MOTIVATION PICTURES</h3>
+  <p class="w3-center"><em>Here are some pictures of me and my friend to help you get motivated.<br> </em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="w3images/p1.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="w3images/p2.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
+
+    <div class="w3-col m3">
+      <img src="w3images/p3.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
+
+    <div class="w3-col m3">
+      <img src="w3images/p4.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="w3images/p5.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
+
+    <div class="w3-col m3">
+      <img src="w3images/p6.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
+
+    <div class="w3-col m3">
+      <img src="w3images/p7.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
+
+    <div class="w3-col m3">
+      <img src="w3images/p8.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <!-- that's how i embedded the video into the website: -->
+  <div class="w3-container w3-padding-32">
+    <h2 class="w3-center">My Journey</h2>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-third">
+        <iframe class="w3-margin-bottom" width="315%" height="540" src="https://www.youtube.com/embed/NZFUaEn-BZk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+<!-- Third Parallax Image with contact Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">IF YOU NEED ANY ADVICE OR HELP</h3>
+  <p class="w3-center"><em>I'd love to have a talk!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 312 A5C, NYUAD, Abu dhabi, UAE<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +971 565 340617<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: nabih@nyu.edu<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <!-- this is a form that i used to get the user's information: -->
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <!-- //this is the name of the user: -->
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <!-- //this is the email of the user: -->
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <!-- //this is the button that the user will click on to send the message but it doesn't work -->
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ 
+
+</body>
+</html>
