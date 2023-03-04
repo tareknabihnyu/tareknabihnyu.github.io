@@ -1,0 +1,135 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.strip {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.strip:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+/* Set up styles for the content within each strip */
+.content h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  }
+  
+  /* Set up styles for the first strip */
+  .strip:first-of-type .bg-image {
+  transform: scale(1.5) translateY(-30%);
+  }
+  
+  /* Set up styles for when a strip is active */
+  .strip.active .bg-image {
+  transform: scale(1.2) translateY(-20%);
+  }
+  
+  /* Set up styles for when a strip is not active */
+  .strip:not(.active) .bg-image {
+  transform: scale(1) translateY(0);
+  }
+  
+  /* Set up styles for the active content */
+  .strip.active .content {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 0.8s ease-in-out;
+  }
+  
+  /* Set up styles for the inactive content */
+  .strip:not(.active) .content {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  }
+  
+  
+
+/* Strip One */
+.strip[data-image="image1.png"] {
+  background-image: url("image1.png");
+}
+
+/* Strip Two */
+.strip[data-image="image2.png"] {
+  background-image: url("image2.png");
+}
+
+/* Strip Three */
+.strip[data-image="image3.png"] {
+  background-image: url("image3.png");
+}
+
+/* Strip Four */
+.strip[data-image="image4.png"] {
+  background-image: url("image4.png");
+}
+
+/* Strip Five */
+.strip[data-image="image5.png"] {
+  background-image: url("image5.png");
+}
+
+/* Strip Six */
+.strip[data-image="image6.png"] {
+  background-image: url("image6.png");
+}
+
+/* Hover Effect */
+.strip:hover {
+  transform: scale(1.1);
+}
