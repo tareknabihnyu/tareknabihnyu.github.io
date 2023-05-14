@@ -1,0 +1,204 @@
+<!-- MAKE a webpage with a scroll animation, which tells a story -->
+<!-- Create the body as setions wtih scroll animation-->
+<!-- Create a header with a title and a menu -->
+<!-- Create a footer with a menu -->
+<!-- Create a menu with a list of links -->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>What a Sticky</title>
+<style>
+    html {
+  scroll-behavior: smooth;
+}
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+    .header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+    }
+   
+    .section {
+        padding: 20px 0;
+        height: 100%;
+        width: 100%;
+
+    }
+    .section h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+    }
+
+    #section1 {
+        background-color: #000;
+        padding: 20px 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #section2 {
+        background-color: #000;
+        padding: 20px 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #section3 {
+        background-color: #000;
+        padding: 20px 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #section4 {
+        padding: 20px 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section p {
+        margin: 0;
+        padding: 0;
+    }
+    .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+    }
+   
+    .center {
+        text-align: center;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        bottom: 10px;
+        top: 40px;
+        right: 45%;
+        padding: 10px;
+        background-color: #000;
+        border: 1px solid #fff;
+    }
+
+    .content {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+</style>
+</head>
+<body>
+    <div class="center"
+    <div class="container">
+        <header class="header">
+            <h1>IM - CommLab - What a sticky</h1>
+        </header>
+        <section id="section1" style="background-color: #06283D;">
+            <img src="1.png" style="padding-left: 10%;">
+            <img src="2.png" style=" top: 50%; height: 50%;">
+        </section>
+
+        <section id="section2" style="background-color: #256D85;">
+            <h2>This story is about Sticky. Throughout his life, he never understood why people referred to him as a stickman. He was always told that he looks like a stick, but he didn't know what a stick as he was blind and never asked. One day, he heard someone calling his name from afar ... </h2>
+            <br>
+            <img src="3.png" >
+            <h2>The voice kept coming closer and closer, until Sticky was able to touch something, it started speaking and explaining to him that it's a wooden stick. He still couldn't understand why people were comparing him to an object and not a person.</h2>
+            <br>
+        
+        </section>
+
+        <section id="section3" style="background-color: #47B5FF;">
+            <br>
+            <h2> He picked the stick up and talked for a bit, until he found that what they have in common is how thin they both are, and that people have been calling him a stick man as he combines both aspects, the thinness of the stick as well as the body of a man. The stick told him that anyone that picks it up has one wish to make, and wished to see the other stick men in the world ...</h2>
+            <img src="6.png" >
+        </section>
+
+        <section id="section4" style="background-color: #DFF6FF;">
+            <h2>A few seconds later, he felt the ground split and felt a free fall for a couple of minutes. He was horrified and confused until he his body was caught by a piece of cloth, held from the sides by two stickmen, welcoming him to Stick World, a place that consists of people that made the same wish as Sticky.</h2>
+            <img src="5.png" style="top: 50px;">
+        </section>
+
+        <container class= "footer">
+            <h1>Tarek Nabih - CommLab</h1>
+        </container>
+    </div>
+    </div>
+</body>
+<script>
+    //scroll animation for the sections of the body of the webpage with scroll animation and a story telling
+    //change the background color of the sections with scroll animation
+    
+    var section1 = document.getElementById("section1");
+    var section2 = document.getElementById("section2");
+    var section3 = document.getElementById("section3");
+    var section4 = document.getElementById("section4");
+
+    //change the background color of the sections with scroll animation 
+    window.addEventListener("scroll", function() {
+        var value = window.scrollY;
+        section1.style.clipPath = "circle(" + value + "px at center)"; 
+        section1.style.backgroundColor = "rgb(200, 40, " + value + ")";
+        section2.style.clipPath = "circle(" + value + "px at center)";
+        //change gradient color of the background
+        var secTwoVal = value - window.innerHeight
+        section2.style.backgroundColor = "rgb(255, 100, " + secTwoVal + ")";
+        // section3.style.clipPath = "circle(" + value + "px at center)";
+        var secThreeVal = value - window.innerHeight*2
+        section3.style.backgroundColor = "rgb(50, 180, " + secThreeVal + ")";
+        // section4.style.clipPath = "circle(" + value + "px at center)";
+
+        var secFourVal = value - window.innerHeight*3
+        section4.style.backgroundColor = "rgb(200, 0, " + secFourVal + ")";
+
+        //move the images with scroll animation
+        section1.style.backgroundPosition = "center " + value * 0.5 + "px";
+        section2.style.backgroundPosition = "center " + value * 0.5 + "px";
+        section3.style.backgroundPosition = "center " + value * 0.5 + "px";
+        section4.style.backgroundPosition = "center " + value * 0.5 + "px";
+        
+    });
+
+    //window scroll 
+
+    window.scroll({
+        top: 100,
+        left: 0,
+        behavior: 'smooth'
+    });
+
+    
+
+    //move image with scroll animation and  parallax effect 
+    // var img = document.getElementById("img");
+    // window.addEventListener("scroll", function() {
+    //     var value = window.scrollY;
+    //     img.style.top = value * 0.5 + "px";
+    // });
+
+    //change the background color of the sections with scroll animation
+    // const [red, green, blue] = [69, 111, 225]
+    // window.addEventListener('scroll', () => {
+    //     const y = 1 + (window.scrollY || window.pageYOffset) / 150
+    //     const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+    //     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    // })
+    
+</script>
+
+</html>
